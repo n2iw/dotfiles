@@ -18,7 +18,7 @@ Plug 'sukima/xmledit'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-repeat'
 Plug 'vim-airline/vim-airline'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 Plug 'Shougo/deoplete.nvim'
@@ -52,7 +52,7 @@ let g:deoplete#enable_at_startup = 1
 filetype plugin indent on
 "set cursorline                    " highlight current line
 set smartcase                     " pay attention to case when caps are used
-set vb                            " enable visual bell (disable audio bell)
+"set vb                            " enable visual bell (disable audio bell)
 
 
 syntax enable             " enable syntax highlighting (previously syntax on).
@@ -92,8 +92,11 @@ noremap <Leader>n :NERDTreeToggle<CR>
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
 silent execute '!mkdir -p ~/.vim_backups'
+set backup             " keep a backup file (restore to previous version)
 set backupdir=~/.vim_backups//
-set directory=~/.vim_backups//
+set undofile           " keep an undo file (undo changes after closing)
+set undodir=~/.vim_backups//
+set directory=~/.vim_backups// " keep swap files here
 "set spell spelllang=en_us
 
 " delimitMate settings
@@ -105,8 +108,6 @@ let delimitMate_smart_quotes = 1
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 "noremap <C-p> :CtrlPMixed<CR>
 
-set backup             " keep a backup file (restore to previous version)
-set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
 
