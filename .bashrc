@@ -5,12 +5,13 @@ alias lpmbp='ssh moyuzhang@lpmbp'
 alias cth='ctags -R .'
 alias cdsimp='cd ~/myprojects/Sites/simple_cms/'
 alias cdmoyu='cd ~/myprojects/Sites/moyuzhang_app/'
-alias ll='ls -lahG'
+alias ll='ls -lahG --color'
+alias ls='ls -h --color'
 alias deploy='cap production deploy'
 alias stage='cap staging deploy'
 alias pg='postgres -D ~/Documents/postgres/ &> /usr/local/var/postgres.log &'
+alias x="xrdb merge ~/.Xresources"
 alias sync_time='rsync -a Time james@lpmbp:/Users/james/Experiments/'
-alias vi='nvim'
 
 export PATH=/usr/local/bin:$PATH
 

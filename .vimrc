@@ -2,9 +2,9 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 " My Plugins here:
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'benekastah/neomake'
+"Plug 'benekastah/neomake'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
@@ -21,7 +21,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
-Plug 'Shougo/deoplete.nvim'
+"Plug 'Shougo/deoplete.nvim'
 " My Plugins ends
 
 call plug#end()
@@ -32,15 +32,15 @@ runtime macros/matchit.vim
 "let loaded_matchparen = 1
 
 " Execute Neomake after save
-autocmd! BufWritePost * Neomake
+"autocmd! BufWritePost * Neomake
 " Open Neomake list window
-let g:neomake_open_list = 2
-let g:neomake_list_height = 3
-let g:neomake_airline = 1
+"let g:neomake_open_list = 2
+"let g:neomake_list_height = 3
+"let g:neomake_airline = 1
 
 " Use system clipboard by default
 "set clipboard=unnamed
-set clipboard+=unnamedplus
+set clipboard+=unnamed
 
 " airline display opened buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -52,7 +52,7 @@ let g:deoplete#enable_at_startup = 1
 filetype plugin indent on
 "set cursorline                    " highlight current line
 set smartcase                     " pay attention to case when caps are used
-set vb                            " enable visual bell (disable audio bell)
+"set vb                            " enable visual bell (disable audio bell)
 
 
 syntax enable             " enable syntax highlighting (previously syntax on).
@@ -75,10 +75,12 @@ colo desert
 set gfn=Menlo:h14
 
 let mapleader=','
-set timeoutlen=400
+"set timeoutlen=400
 noremap Q <Esc>
-noremap <Leader>ll :tabnext<CR>
-noremap <Leader>hh :tabprevious<CR>
+"noremap <Leader>ll :tabnext<CR>
+"noremap <Leader>hh :tabprevious<CR>
+noremap <Leader>ll :bn<CR>
+noremap <Leader>hh :bp<CR>
 noremap <Leader>l <C-w>l
 noremap <Leader>h <C-w>h
 noremap <Leader>k <C-w>k
@@ -92,8 +94,11 @@ noremap <Leader>n :NERDTreeToggle<CR>
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
 silent execute '!mkdir -p ~/.vim_backups'
+set backup             " keep a backup file (restore to previous version)
 set backupdir=~/.vim_backups//
-set directory=~/.vim_backups//
+set undofile           " keep an undo file (undo changes after closing)
+set undodir=~/.vim_backups//
+set directory=~/.vim_backups// " swap files in this folder
 "set spell spelllang=en_us
 
 " delimitMate settings
@@ -105,8 +110,6 @@ let delimitMate_smart_quotes = 1
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 "noremap <C-p> :CtrlPMixed<CR>
 
-set backup             " keep a backup file (restore to previous version)
-set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
 

@@ -18,13 +18,19 @@ export PATH="/usr/local/var/rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # The full pathname of the directory that contains Daikon
-export DAIKONDIR=/Users/james/Applications/daikon
+
+
+export DAIKONDIR=/home/vidia/mingying/Applications/daikon
 # The full pathname of the directory that contains the Java JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home
-source $DAIKONDIR/scripts/daikon.bashrc
+#export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+#source $DAIKONDIR/scripts/daikon.bashrc
 
 # For defects4j projects
 export PATH=~/Applications/defects4j/framework/bin:~/Applications/defects4j/framework/util:$PATH
+export PATH=~/Applications/maven/bin:$PATH
+
+export PATH=~/Applications/ant/bin:$PATH
+export PATH=/home/vidia/mingying/local/bin:$PATH
 
 export CLICOLOR=1
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
