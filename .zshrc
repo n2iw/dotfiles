@@ -100,7 +100,7 @@ alias vi='nvim'
 
 export CLASSPATH=.:$CLASSPATH
 
-source ".secret.sh"
+source "~/.secret.sh"
 export RBENV_ROOT=/usr/local/var/rbenv
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
