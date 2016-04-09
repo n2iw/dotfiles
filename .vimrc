@@ -72,7 +72,7 @@ set autoindent            " auto-indent
 
 set t_Co=256              " enable 256-color mode.
 colo desert
-set gfn=Menlo:h14
+set gfn=Menlo\ for\ Powerline:h14
 
 let mapleader=','
 set timeoutlen=400
