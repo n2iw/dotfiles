@@ -75,21 +75,22 @@ colo desert
 set gfn=Menlo\ for\ Powerline:h14
 
 let mapleader=','
-set timeoutlen=400
+"set timeoutlen=400
 noremap Q <Esc>
 "noremap <Leader>ll :tabnext<CR>
 "noremap <Leader>hh :tabprevious<CR>
-noremap <Leader>ll :bn<CR>
-noremap <Leader>hh :bp<CR>
 noremap <Leader>l <C-w>l
 noremap <Leader>h <C-w>h
 noremap <Leader>k <C-w>k
 noremap <Leader>j <C-w>j
 noremap <Leader>s :w<CR>
 noremap <Leader>d :bdelete<CR>
+noremap <Leader>,l :bn<CR>
+noremap <Leader>,h :bp<CR>
 noremap <Leader>q :q<CR>
+noremap <Leader>x :x<CR>
 noremap <Leader>b :TagbarToggle<CR>
-noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>t :NERDTreeToggle<CR>
 
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
