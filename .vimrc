@@ -18,7 +18,7 @@ Plug 'sukima/xmledit'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-repeat'
 Plug 'vim-airline/vim-airline'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
 "Plug 'Shougo/deoplete.nvim'
@@ -79,15 +79,16 @@ let mapleader=','
 noremap Q <Esc>
 "noremap <Leader>ll :tabnext<CR>
 "noremap <Leader>hh :tabprevious<CR>
-noremap <Leader>ll :bn<CR>
-noremap <Leader>hh :bp<CR>
 noremap <Leader>l <C-w>l
 noremap <Leader>h <C-w>h
 noremap <Leader>k <C-w>k
 noremap <Leader>j <C-w>j
 noremap <Leader>s :w<CR>
-noremap <Leader>d :bdelete<CR>
 noremap <Leader>q :q<CR>
+noremap <Leader>x :x<CR>
+noremap <Leader>d :bdelete<CR>
+noremap <Leader>,l :bn<CR>
+noremap <Leader>,h :bp<CR>
 noremap <Leader>b :TagbarToggle<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 
