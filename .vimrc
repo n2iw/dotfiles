@@ -91,6 +91,7 @@ noremap <Leader>q :q<CR>
 noremap <Leader>x :x<CR>
 noremap <Leader>b :TagbarToggle<CR>
 noremap <Leader>t :NERDTreeToggle<CR>
+noremap <Leader>* *<C-O>:%s///gn<CR>
 
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
