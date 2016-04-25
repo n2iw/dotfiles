@@ -2,7 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 " My Plugins here:
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
 Plug 'Raimondi/delimitMate'
@@ -21,7 +20,13 @@ Plug 'vim-airline/vim-airline'
 "Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
-Plug 'Shougo/deoplete.nvim'
+if v:version >= 704
+  Plug 'SirVer/ultisnips'
+endif
+if has('nvim')
+  "Neovim only plugins
+  Plug 'Shougo/deoplete.nvim'
+endif
 " My Plugins ends
 
 call plug#end()
