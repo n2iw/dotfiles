@@ -20,7 +20,7 @@ Plug 'vim-airline/vim-airline'
 "Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
-if v:version >= 704
+if v:version >= 704 || has('nvim')
   Plug 'SirVer/ultisnips'
 endif
 if has('nvim')
