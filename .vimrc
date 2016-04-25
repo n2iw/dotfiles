@@ -23,9 +23,9 @@ Plug 'wellle/targets.vim'
 if v:version >= 704
   Plug 'SirVer/ultisnips'
 endif
-Plug 'Shougo/deoplete.nvim'
 if has('nvim')
   "Neovim only plugins
+  Plug 'Shougo/deoplete.nvim'
 endif
 " My Plugins ends
 
