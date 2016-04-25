@@ -2,9 +2,8 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 " My Plugins here:
-"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
@@ -21,7 +20,13 @@ Plug 'vim-airline/vim-airline'
 "Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
-"Plug 'Shougo/deoplete.nvim'
+if v:version >= 704
+  Plug 'SirVer/ultisnips'
+endif
+Plug 'Shougo/deoplete.nvim'
+if has('nvim')
+  "Neovim only plugins
+endif
 " My Plugins ends
 
 call plug#end()
@@ -32,15 +37,15 @@ runtime macros/matchit.vim
 "let loaded_matchparen = 1
 
 " Execute Neomake after save
-"autocmd! BufWritePost * Neomake
+autocmd! BufWritePost * Neomake
 " Open Neomake list window
-"let g:neomake_open_list = 2
-"let g:neomake_list_height = 3
-"let g:neomake_airline = 1
+let g:neomake_open_list = 2
+let g:neomake_list_height = 3
+let g:neomake_airline = 1
 
 " Use system clipboard by default
 "set clipboard=unnamed
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " airline display opened buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -72,7 +77,7 @@ set autoindent            " auto-indent
 
 set t_Co=256              " enable 256-color mode.
 colo desert
-set gfn=Menlo:h14
+set gfn=Menlo\ for\ Powerline:h14
 
 let mapleader=','
 "set timeoutlen=400
@@ -84,13 +89,14 @@ noremap <Leader>h <C-w>h
 noremap <Leader>k <C-w>k
 noremap <Leader>j <C-w>j
 noremap <Leader>s :w<CR>
-noremap <Leader>q :q<CR>
-noremap <Leader>x :x<CR>
 noremap <Leader>d :bdelete<CR>
 noremap <Leader>,l :bn<CR>
 noremap <Leader>,h :bp<CR>
+noremap <Leader>q :q<CR>
+noremap <Leader>x :x<CR>
 noremap <Leader>b :TagbarToggle<CR>
-noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>t :NERDTreeToggle<CR>
+noremap <Leader>* *<C-O>:%s///gn<CR>
 
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
@@ -99,7 +105,7 @@ set backup             " keep a backup file (restore to previous version)
 set backupdir=~/.vim_backups//
 set undofile           " keep an undo file (undo changes after closing)
 set undodir=~/.vim_backups//
-set directory=~/.vim_backups// " swap files in this folder
+set directory=~/.vim_backups// " keep swap files here
 "set spell spelllang=en_us
 
 " delimitMate settings
