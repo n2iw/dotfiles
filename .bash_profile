@@ -21,7 +21,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export DAIKONDIR=/Users/james/Applications/daikon
 # The full pathname of the directory that contains the Java JDK
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home
-source $DAIKONDIR/scripts/daikon.bashrc
+if [ -f $DAIKONDIR/scripts/daikon.bashrc ]; then
+  source $DAIKONDIR/scripts/daikon.bashrc
+fi
 
 # For defects4j projects
 export PATH=~/Applications/defects4j/framework/bin:~/Applications/defects4j/framework/util:$PATH
