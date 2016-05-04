@@ -25,7 +25,9 @@ export PATH=~/myprojects/InvariantCompare:$PATH
 
 export CLASSPATH=.:$CLASSPATH
 
-source "~/.secret.sh"
+if [ -f ~/.secret.sh ]; then
+  source "~/.secret.sh"
+fi
 
 # Git branch in prompt.
 parse_git_branch() {
