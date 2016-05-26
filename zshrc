@@ -56,7 +56,9 @@ plugins=(git)
 export PATH="./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
