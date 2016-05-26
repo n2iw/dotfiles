@@ -1,0 +1,9 @@
+[user]
+	name = Ming Ying
+	email = yingming18@gmail.com
+[push]
+	default = matching
+[core]
+	excludesfile = /Users/james/.gitignore_global
+[alias]
+	co = checkout
