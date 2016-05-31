@@ -25,7 +25,7 @@ export DAIKONDIR=~/Applications/daikon
 # The full pathname of the directory that contains the Java JDK
 os="$(uname -s)"
 if [  $os == "Darwin" ]; then
-  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 elif [ $os == "Linux" ]; then
   export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 
