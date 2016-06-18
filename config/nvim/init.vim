@@ -1,6 +1,6 @@
 set nocompatible
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 " My Plugins here:
 Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
