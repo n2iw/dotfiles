@@ -38,9 +38,13 @@ for file in $files; do
 done
 
 # link vim config file and folder to neovim version
-mv ~/.vimrc $olddir
+echo "Moving ~/.vim to $olddir"
 mv ~/.vim $olddir
+echo "Creating symlink for .vim in home directory."
 ln -s ~/.config/nvim ~/.vim
+echo "Moving ~/.vimrc to $olddir"
+mv ~/.vimrc $olddir
+echo "Creating symlink for .vimrc in home directory."
 ln -s ~/.config/nvim/init.vim ~/.vimrc
 
 install_zsh () {
