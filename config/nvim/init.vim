@@ -74,6 +74,7 @@ set ignorecase            " Make searches case-insensitive.
 set shiftround            " always indent/outdent to the nearest tabstop
 set autoindent            " auto-indent
 "set nowrap                " don't wrap text
+"set mouse=
 
 set t_Co=256              " enable 256-color mode.
 colo desert
