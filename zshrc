@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin"
+export PATH="/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
@@ -115,3 +115,5 @@ export DAIKONDIR=/Users/james/Applications/daikon
 # The full pathname of the directory that contains the Java JDK
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 source $DAIKONDIR/scripts/daikon.zsh
+
+export PATH="./bin:$PATH"
