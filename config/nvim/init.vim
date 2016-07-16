@@ -44,8 +44,8 @@ let g:neomake_list_height = 3
 let g:neomake_airline = 1
 
 " Use system clipboard by default
-"set clipboard=unnamed
-set clipboard+=unnamedplus
+set clipboard=unnamed
+"set clipboard=unnamedplus
 
 " airline display opened buffers
 let g:airline#extensions#tabline#enabled = 1
