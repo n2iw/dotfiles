@@ -1,0 +1,54 @@
+{
+ "autoExec" : false,
+ "autoExpand" : false,
+ "autocompletionMode" : 1,
+ "batchSize" : 50,
+ "connections" : [
+  {
+   "connectionName" : "Local",
+   "credentials" : [
+    {
+     "databaseName" : "admin",
+     "enabled" : false,
+     "mechanism" : "SCRAM-SHA-1",
+     "userName" : "",
+     "userPassword" : ""
+    }
+   ],
+   "defaultDatabase" : "test",
+   "serverHost" : "localhost",
+   "serverPort" : 27017,
+   "ssh" : {
+    "askPassword" : false,
+    "enabled" : false,
+    "host" : "192.168.10.10",
+    "method" : "publickey",
+    "passphrase" : "",
+    "port" : 22,
+    "privateKeyFile" : "/Users/james/.ssh/vagrant",
+    "publicKeyFile" : "",
+    "userName" : "",
+    "userPassword" : ""
+   }
+  }
+ ],
+ "disableConnectionShortcuts" : false,
+ "lineNumbers" : false,
+ "loadMongoRcJs" : false,
+ "mongoTimeoutSec" : 10,
+ "shellTimeoutSec" : 15,
+ "style" : "Native",
+ "textFontFamily" : "",
+ "textFontPointSize" : -1,
+ "timeZone" : 0,
+ "toolbars" : {
+  "connect" : true,
+  "exec" : true,
+  "explorer" : true,
+  "logs" : false,
+  "open_save" : true
+ },
+ "uuidEncoding" : 0,
+ "version" : "2.0",
+ "viewMode" : 1
+}
