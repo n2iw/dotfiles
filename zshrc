@@ -53,7 +53,15 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:./bin:/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:~/bin:/usr/local/heroku/bin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/Users/james/Applications/defects4j/framework/bin:/Users/james/Applications/defects4j/framework/util:$PATH"
+export PATH="/Users/james/Applications/daikon/scripts:/Users/james/Applications/daikon/plume-lib/bin:$PATH"
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:$PATH"
+export PATH="/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/Users/james/myprojects/InvariantCompare:/Users/james/myprojects/scripts:$PATH"
+export PATH="./bin:~/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
@@ -99,6 +107,8 @@ alias sync_time='rsync -a Time james@lpmbp:/Users/james/Experiments/'
 alias mdb='mongod --config /usr/local/etc/mongod.conf'
 alias bash='bash;source ~/.bash_profile'
 alias vi='nvim'
+alias r='rails'
+alias n='node'
 
 export CLASSPATH=.:$CLASSPATH
 
@@ -116,4 +126,3 @@ export DAIKONDIR=/Users/james/Applications/daikon
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 source $DAIKONDIR/scripts/daikon.zsh
 
-export PATH="./bin:$PATH"
