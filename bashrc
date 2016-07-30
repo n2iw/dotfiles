@@ -11,6 +11,12 @@ alias stage='cap staging deploy'
 alias pg='postgres -D ~/Documents/postgres/ &> /usr/local/var/postgres.log &'
 alias sync_time='rsync -a Time james@lpmbp:/Users/james/Experiments/'
 alias vi='nvim'
+alias gst='git status'
+alias gd='git diff'
+alias gaa='git add -A'
+alias ga='git add'
+alias gcmsg='git commit -m'
+
 
 export PATH=/usr/local/bin:$PATH
 
@@ -25,8 +31,8 @@ export PATH=~/myprojects/InvariantCompare:$PATH
 
 export CLASSPATH=.:$CLASSPATH
 
-if [ -f ~/.secret.sh ]; then
-  source "~/.secret.sh"
+if [ -f $HOME/.secret.sh ]; then
+  source "$HOME/.secret.sh"
 fi
 
 # Git branch in prompt.
