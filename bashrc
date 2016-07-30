@@ -16,6 +16,7 @@ alias gd='git diff'
 alias gaa='git add -A'
 alias ga='git add'
 alias gcmsg='git commit -m'
+alias gp='git push'
 
 
 export PATH=/usr/local/bin:$PATH
