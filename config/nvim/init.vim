@@ -77,7 +77,7 @@ set autoindent            " auto-indent
 
 " Enable mouse use in all modes
 set mouse=a
-let g:NERDTreeMouseMode=2 
+let g:NERDTreeMouseMode=3 
 
 set t_Co=256              " enable 256-color mode.
 colo desert
