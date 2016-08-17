@@ -50,4 +50,10 @@ export PATH=./bin:$PATH
 
 # Config for nvm
 export NVM_DIR="$HOME/.nvm"
+if [ -f  "$(brew --prefix nvm)/nvm.sh" ]; then
   . "$(brew --prefix nvm)/nvm.sh"
+fi
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
