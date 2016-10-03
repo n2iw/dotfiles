@@ -96,8 +96,8 @@ noremap <Leader>s :w<CR>
 noremap <Leader>d :bdelete<CR>
 noremap <Leader>,l :bn<CR>
 noremap <Leader>,h :bp<CR>
-noremap <Leader>q :q<CR>
-noremap <Leader>qq :qa<CR>
+noremap <Leader>q :qa<CR>
+"noremap <Leader>qq :qa<CR>
 noremap <Leader>x :x<CR>
 noremap <Leader>b :TagbarToggle<CR>
 noremap <Leader>t :NERDTreeToggle<CR>
