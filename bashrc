@@ -10,7 +10,8 @@ alias deploy='cap production deploy'
 alias stage='cap staging deploy'
 alias pg='postgres -D ~/Documents/postgres/ &> /usr/local/var/postgres.log &'
 alias sync_time='rsync -a Time james@lpmbp:/Users/james/Experiments/'
-alias vi='nvim'
+alias vi='mvim'
+alias vim='nvim'
 alias gst='git status'
 alias gd='git diff'
 alias gaa='git add -A'
@@ -26,11 +27,13 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Added for speeding up rails commands with Spring
 
-export PATH="~/bin:$PATH"
+export PATH=~/bin:$PATH
 export PATH=~/myprojects/scripts:$PATH
 export PATH=~/myprojects/InvariantCompare:$PATH
 
-export CLASSPATH=.:$CLASSPATH
+export CATALINA_HOME=$HOME/Applications/apache-tomcat-7.0.70
+export CLASSPATH=.:$CATALINA_HOME/lib/jsp-api.jar:$CLASSPATH
+export PATH=$CATALINA_HOME/bin:$PATH
 
 if [ -f $HOME/.secret.sh ]; then
   source "$HOME/.secret.sh"
