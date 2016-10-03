@@ -7,3 +7,6 @@
 	excludesfile = /Users/james/.gitignore_global
 [alias]
 	co = checkout
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
