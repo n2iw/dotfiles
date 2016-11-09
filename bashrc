@@ -10,14 +10,15 @@ alias deploy='cap production deploy'
 alias stage='cap staging deploy'
 alias pg='postgres -D ~/Documents/postgres/ &> /usr/local/var/postgres.log &'
 alias sync_time='rsync -a Time james@lpmbp:/Users/james/Experiments/'
-alias vi='mvim'
-alias vim='nvim'
+alias vi='nvim'
+alias vim='mvim'
 alias gst='git status'
 alias gd='git diff'
 alias gaa='git add -A'
 alias ga='git add'
 alias gcmsg='git commit -m'
 alias gp='git push'
+alias diff='colordiff'
 
 
 export PATH=/usr/local/bin:$PATH
@@ -29,7 +30,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH=~/bin:$PATH
 export PATH=~/myprojects/scripts:$PATH
-export PATH=~/myprojects/InvariantCompare:$PATH
+export PATH=~/myprojects/invariant_tools:$PATH
 
 export CATALINA_HOME=$HOME/Applications/apache-tomcat-7.0.70
 export CLASSPATH=.:$CATALINA_HOME/lib/jsp-api.jar:$CLASSPATH
