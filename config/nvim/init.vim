@@ -20,6 +20,10 @@ Plug 'vim-airline/vim-airline'
 "Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
+Plug 'keith/swift.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'ternjs/tern_for_vim'
 if v:version >= 704 || has('nvim')
   Plug 'SirVer/ultisnips'
 endif
@@ -37,7 +41,7 @@ runtime macros/matchit.vim
 "let loaded_matchparen = 1
 
 " Execute Neomake after save
-autocmd! BufWritePost * Neomake
+"autocmd! BufWritePost * Neomake
 " Open Neomake list window
 let g:neomake_open_list = 2
 let g:neomake_list_height = 3
@@ -62,7 +66,7 @@ set smartcase                     " pay attention to case when caps are used
 
 syntax enable             " enable syntax highlighting (previously syntax on).
 set laststatus=2          " last window always has a statusline
-set et sta sw=2 sts=2 ts=2 
+set et sta sw=4 sts=4 ts=4 
 set fileencodings=utf-8,utf-16le,chinese,big5,latin1
 "set smartcase
 set number
@@ -81,7 +85,7 @@ let g:NERDTreeMouseMode=3
 
 set t_Co=256              " enable 256-color mode.
 colo desert
-set gfn=Menlo\ for\ Powerline:h14
+set gfn=Menlo\ for\ Powerline:h13
 
 let mapleader=','
 "set timeoutlen=400
@@ -173,8 +177,17 @@ endif
 if &term == 'xterm-256color' || &term == 'screen-256color'
     let &t_SI = "\<Esc>[5 q"
     let &t_EI = "\<Esc>[1 q"
+
+let g:used_javascript_libs = 'angularjs,angularui,angularuirouter'
     set termguicolors
 endif
+
+" Omni completion
+set omnifunc=syntaxcomplete#Complete
+
+" Tern settings
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
 
 if exists('$TMUX')
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"

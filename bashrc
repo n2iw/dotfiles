@@ -40,6 +40,12 @@ if [ -f $HOME/.secret.sh ]; then
   source "$HOME/.secret.sh"
 fi
 
+# Resty setup
+if [ -f $HOME/.resty ]; then
+  source "$HOME/.resty"
+fi
+
+
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

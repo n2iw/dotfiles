@@ -57,3 +57,7 @@ fi
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+# Config for KF6
+export LOGDIR=$HOME/Documents/logs/kf6
+export MONGOLAB_URI=mongodb://localhost/kf6-dev
