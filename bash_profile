@@ -13,7 +13,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-alias mdb='mongod --config /usr/local/etc/mongod.conf'
+alias mdb='mongod --config /usr/local/etc/mongod.conf &'
 
 export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="/usr/local/var/rbenv/bin:$PATH"
