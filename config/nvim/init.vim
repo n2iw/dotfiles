@@ -2,6 +2,7 @@ set nocompatible
 
 call plug#begin('~/.config/nvim/plugged')
 " My Plugins here:
+Plug 'briancollins/vim-jst'
 Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
 Plug 'Raimondi/delimitMate'
@@ -12,24 +13,30 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-"Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'sukima/xmledit'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-repeat'
+
 Plug 'vim-airline/vim-airline'
-"Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'easymotion/vim-easymotion'
 Plug 'wellle/targets.vim'
+
 Plug 'keith/swift.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
+
 Plug 'ternjs/tern_for_vim'
 if v:version >= 704 || has('nvim')
   Plug 'SirVer/ultisnips'
 endif
 if has('nvim')
   "Neovim only plugins
+  Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
+else
   Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 " My Plugins ends
 
@@ -52,7 +59,9 @@ set clipboard=unnamed
 "set clipboard=unnamedplus
 
 " airline display opened buffers
+"let g:airline_extension = []
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
 let g:airline_powerline_fonts = 1
 
 " Enable deoplete
@@ -85,7 +94,7 @@ let g:NERDTreeMouseMode=3
 
 set t_Co=256              " enable 256-color mode.
 colo desert
-set gfn=Menlo\ for\ Powerline:h13
+set gfn=Menlo\ for\ Powerline:h12
 
 let mapleader=','
 "set timeoutlen=400

@@ -17,7 +17,7 @@ alias mdb='mongod --config /usr/local/etc/mongod.conf &'
 
 export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="/usr/local/var/rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # The full pathname of the directory that contains Daikon
 export DAIKONDIR=~/Applications/daikon
@@ -26,6 +26,7 @@ export DAIKONDIR=~/Applications/daikon
 os="$(uname -s)"
 if [  $os == "Darwin" ]; then
   export JAVA_HOME=/Library/Java/Home
+  export PATH=$JAVA_HOME/bin:$PATH
 elif [ $os == "Linux" ]; then
   export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 
@@ -35,9 +36,9 @@ elif [ $os == "Linux" ]; then
 
 fi
 
-if [ -f $DAIKONDIR/scripts/daikon.bashrc ]; then
-  source $DAIKONDIR/scripts/daikon.bashrc
-fi
+#if [ -f $DAIKONDIR/scripts/daikon.bashrc ]; then
+  #source $DAIKONDIR/scripts/daikon.bashrc
+#fi
 
 # For defects4j projects
 export PATH=~/Applications/defects4j/framework/bin:~/Applications/defects4j/framework/util:$PATH
@@ -50,14 +51,18 @@ export PATH=./bin:$PATH
 
 # Config for nvm
 export NVM_DIR="$HOME/.nvm"
-if [ -f  "$(brew --prefix nvm)/nvm.sh" ]; then
-  . "$(brew --prefix nvm)/nvm.sh"
-fi
+. "/usr/local/opt/nvm/nvm.sh"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
 # Config for KF6
-export LOGDIR=$HOME/Documents/logs/kf6
+export LOGDIR=$HOME/myprojects/KF6/logs
 export MONGOLAB_URI=mongodb://localhost/kf6-dev
+export ATTACHMENTS_PATH=$HOME/myprojects/KF6/attachments
+export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
+
+# JBoss AS/WildFly
+export JBOSS_HOME=/Users/james/Applications/wildfly-10.1.0.Final
+export PATH=$JBOSS_HOME/bin:$PATH
